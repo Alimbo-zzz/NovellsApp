@@ -1,0 +1,59 @@
+.settings {
+	padding: 1em 0;
+
+
+	&__grid {
+		display: flex;
+		flex-direction: column;
+		gap: 2em;
+	}
+
+	&__exit {
+		align-self: flex-end;
+		margin-bottom: -2em;
+	}
+
+	&__music {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 0.3em;
+		background: $fiolet;
+		border-radius: 0.5em;
+		height: 3em;
+		gap: 1.4em;
+		padding-right: 1.4em;
+		box-shadow: 0 0 0.2em 0.1em rgba($color: #fff, $alpha: 0.4);
+
+		span {
+			font-family: 'Gilroy';
+			height: 100%;
+			width: 100%;
+			display: block;
+			font-size: 1.6em;
+			text-align: center;
+			font-weight: bold;
+			border-radius: 0.3em;
+			background: $fiolet-light;
+		}
+	}
+
+	&__list {
+		display: flex;
+		flex-direction: column;
+		gap: 0.8em;
+	}
+
+	&__item {
+		background: $fiolet-dark;
+		font-size: 1.4em;
+		font-family: 'Gilroy';
+		font-weight: bold;
+		padding: 0.4em 0.8em;
+		border-radius: 0.4em;
+		box-shadow: 0 0 0.1em 0em rgba($color: #fff, $alpha: 0.6);
+		transition: 0.2s;
+		cursor: pointer;
+	}
+
+}

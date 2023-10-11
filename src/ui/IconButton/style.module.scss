@@ -1,0 +1,29 @@
+.btn {
+	width: 4em;
+	aspect-ratio: 1/1;
+	border-radius: 50%;
+	border: 0.3em solid $fiolet;
+	background: $fiolet-light;
+	position: relative;
+	box-shadow:
+		inset 0 0 0.5em 0em rgba($color: #fff, $alpha: 0.4),
+		0 0 0.5em 0em rgba($color: #fff, $alpha: 0.4);
+
+	cursor: pointer;
+	transition: 0.15s;
+
+	&:active {
+		transform: scale(0.8);
+	}
+
+
+	&__icon {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		width: 75%;
+		aspect-ratio: 1/1;
+	}
+
+}
