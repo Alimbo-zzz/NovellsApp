@@ -7,7 +7,7 @@ const src = resolve(__dirname, './src');
 const assets = resolve(__dirname, './src/assets');
 
 export default defineConfig({
-  base: '/',
+  base: '/NovellsApp/',
   plugins: [
     react(),
     legacy({ targets: ['IE >= 11'] }),
