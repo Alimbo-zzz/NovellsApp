@@ -1,13 +1,20 @@
 .rewards {
 	padding: 2em 0;
 
+
+	&[data-lang='ru'] {
+		font-size: 0.8em;
+	}
+
 	&__cont {
 		display: flex;
 		flex-direction: column;
 		gap: 2em;
 	}
 
-
+	h2 {
+		white-space: nowrap;
+	}
 
 	&__list {
 		display: flex;

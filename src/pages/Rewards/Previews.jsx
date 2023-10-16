@@ -3,6 +3,8 @@ import cls from './style.module.scss'
 import classNames from 'classnames';
 import { useGallery } from '@hooks';
 import { Link } from "react-router-dom";
+import { useTranslation } from 'react-i18next';
+import lng from './lang.json';
 
 const previews_img = import.meta.glob('@images/ui/reward-bg-*.png', { eager: true })
 
@@ -11,58 +13,52 @@ const previews_img = import.meta.glob('@images/ui/reward-bg-*.png', { eager: tru
 function Previews(props) {
 	const previews = useGallery(previews_img)?.obj;
 	const [rewardItems, setRewardItems] = useState([]);
+	const lang = useTranslation().i18n.language;
+
 
 
 	useEffect(() => {
 		if (!previews) return;
 		setRewardItems([
 			{
-				title: "28-day Login Reward",
-				placeholder: "Log in every day and get gifts!",
+				name: "item-date",
 				route: "/rewards/days",
-				button: "Go!",
 				background: previews['reward-bg-4.png']
 			},
 			{
-				title: "Get FREE Gems!",
-				placeholder: "Watch a short clip and continue playing!",
+				name: "item-gems",
 				route: "/rewards",
 				// route: "/rewards/gems",
-				button: "Get!",
 				background: previews['reward-bg-3.png']
 			},
 			{
-				title: "Get FREE Keys!",
-				placeholder: "Watch a short clip and continue playing!",
+				name: "item-keys",
 				route: "/rewards",
 				// route: "/rewards/keys",
-				button: "Get!",
 				background: previews['reward-bg-2.png']
 			},
 			{
-				title: "I have a Promo Code",
-				placeholder: "Apply the code and get a prize!",
+				name: "item-code",
 				route: "/rewards/code",
-				button: "Paste",
 				background: previews['reward-bg-1.png']
 			},
 		])
 	}, [previews])
 
 	return (<>
-		<div className={cls.rewards} >
+		<div data-lang={lang} className={cls.rewards} >
 			<div className={classNames(['container', cls.rewards__cont])}>
-				<h2 className='title'>Daily Reward</h2>
+				<h2 className='title'>{lng[lang].main.title}</h2>
 
 				<ul className={cls.rewards__list}>
 					{rewardItems.map((el, i) => (
 						<li className={cls.rewards__preview} key={i}>
 							<div>
-								<h4>{el.title}</h4>
-								<p>{el.placeholder}</p>
+								<h4>{lng[lang][el.name].title}</h4>
+								<p>{lng[lang][el.name].placeholder}</p>
 							</div>
 							<img src={el.background} />
-							<Link to={el.route}>{el.button}</Link>
+							<Link to={el.route}>{lng[lang][el.name].button}</Link>
 						</li>
 					))}
 				</ul>

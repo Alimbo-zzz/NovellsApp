@@ -4,7 +4,9 @@ import App from '@pages/index.jsx'
 import '@styles/index.scss'
 import '@scripts/getImages'
 import store from '@/store/index.js';
-import { Provider } from 'react-redux'
+import { Provider } from 'react-redux';
+import '@/assets/localization';
+
 
 const root = document.getElementById('root');
 

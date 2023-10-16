@@ -2,9 +2,14 @@ import React, { useState, useEffect } from 'react';
 import cls from './style.module.scss';
 
 
-function Select({ data = [], onChange }) {
-	const [activeIndex, setActiveIndex] = useState(0);
+function Select({ data = [], onChange, value = 0 }) {
+	const [activeIndex, setActiveIndex] = useState(value);
 	const [isOpen, setIsOpen] = useState(false);
+
+
+	useEffect(() => {
+		setActiveIndex(value)
+	}, [value])
 
 
 	const toggleSelect = () => setIsOpen(prev => !prev);

@@ -1,12 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import cls from './style.module.scss';
 import { useSelector } from 'react-redux';
+import { useTranslation } from 'react-i18next';
+
 
 
 function MainPreview() {
 	const { activeData, activeStory, novells } = useSelector(state => state.NovellsList);
 
 	const [storyData, setStoryData] = useState(null);
+	const lang = useTranslation().i18n.language;
 
 	useEffect(() => {
 		if (!activeStory || !novells) return;
@@ -14,6 +17,7 @@ function MainPreview() {
 		setStoryData(data);
 	}, [activeStory])
 
+	const lngBtnText = (lang) => lang === 'en' ? "Play" : "Играть";
 
 
 	return (<>
@@ -24,7 +28,7 @@ function MainPreview() {
 				))}
 			</ul>
 			<img src={storyData?.preview} className={cls.preview__image} />
-			<button className={cls.preview__button}>Play</button>
+			<button className={cls.preview__button}>{lngBtnText(lang)}</button>
 		</div>
 	</>);
 }

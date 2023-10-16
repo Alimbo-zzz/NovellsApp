@@ -1,0 +1,72 @@
+{
+	"en": {
+		"main": {
+			"title": "Daily Reward"
+		},
+		"promo-code": {
+			"title": "Promo Code",
+			"placeholder": "Enter a Promo Code:",
+			"btn": "Apply"
+		},
+		"date-rewards": {
+			"title": "Daily Reward",
+			"item-foot": "Day",
+			"btn": "Get!"
+		},
+		"item-date": {
+			"title": "28-day Login Reward",
+			"placeholder": "Log in every day and get gifts!",
+			"button": "Go!"
+		},
+		"item-gems": {
+			"title": "Get FREE Gems!",
+			"placeholder": "Watch a short clip and continue playing!",
+			"button": "Get!"
+		},
+		"item-keys": {
+			"title": "Get FREE Keys!",
+			"placeholder": "Watch a short clip and continue playing!",
+			"button": "Get!"
+		},
+		"item-code": {
+			"title": "I have a Promo Code",
+			"placeholder": "Apply the code and get a prize!",
+			"button": "Paste"
+		}
+	},
+	"ru": {
+		"main": {
+			"title": "Дневные награды"
+		},
+		"promo-code": {
+			"title": "Промокод",
+			"placeholder": "Введите промокод:",
+			"btn": "Применить"
+		},
+		"date-rewards": {
+			"title": "Награды",
+			"item-foot": "День",
+			"btn": "Получить!"
+		},
+		"item-date": {
+			"title": "Награды за 28-дневный вход",
+			"placeholder": "Заходите каждый день и получайте подарки!",
+			"button": "Вперед!"
+		},
+		"item-gems": {
+			"title": "Получить БЕСПЛАТНЫЕ Кристаллы!",
+			"placeholder": "Посмотрите короткий клип и продолжайте играть!",
+			"button": "Получить!"
+		},
+		"item-keys": {
+			"title": "Получить БЕСПЛАТНЫЕ Ключи!",
+			"placeholder": "Посмотрите короткий клип и продолжайте играть!",
+			"button": "Получить!"
+		},
+		"item-code": {
+			"title": "У меня есть промокод",
+			"placeholder": "Примените код и получите приз!",
+			"button": "Вставить"
+		}
+	}
+}
